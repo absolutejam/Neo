@@ -1,0 +1,36 @@
+version 5.251.0
+
+group Neo
+    source https://api.nuget.org/v3/index.json
+    framework: net5.0
+    generate_load_scripts: true
+
+    nuget Ply
+    nuget Serilog
+    nuget FSharpPlus
+    nuget FSharp.Core
+    nuget Neo4j.Driver
+    nuget FsToolkit.ErrorHandling
+    nuget FsToolkit.ErrorHandling.TaskResult
+
+group Build
+    source https://api.nuget.org/v3/index.json
+    framework netstandard2.0
+
+    nuget Fake.Core.ReleaseNotes
+    nuget Fake.Core.Target
+    nuget Fake.DotNet.Cli
+    nuget Paket.Core == 6.0.0-beta8
+
+group Test
+    source https://api.nuget.org/v3/index.json
+    framework: net5.0
+    generate_load_scripts: true
+
+    nuget FSharp.Core
+    nuget Bogus
+    nuget Expecto
+    nuget Expecto.FsCheck
+    nuget Expecto.Diff
+    nuget Expecto.BenchmarkDotnet
+    nuget WaffleGenerator.Bogus 4.1.1

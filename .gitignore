@@ -1,0 +1,7 @@
+volumes/**
+paket-files/
+packages/
+**/obj/
+**/bin/
+.paket/load/
+.idea/

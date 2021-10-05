@@ -1,0 +1,6 @@
+group Neo
+    Ply
+    Serilog
+    Neo4j.Driver
+    FsToolkit.ErrorHandling
+    FsToolkit.ErrorHandling.TaskResult

@@ -1,0 +1,17 @@
+version: "3.1"
+
+services:
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - "./volumes/neo4j_data:/var/lib/neo4j/data"
+      - "./volumes/neo4j/logs:/var/lib/neo4j/logs"
+      - "./volumes/neo4j/import:/var/lib/neo4j/import"
+      - "./volumes/neo4j/plugins:/var/lib/neo4j/plugins"
+
+    environment:
+      NEO4J_AUTH: neo4j/password
+

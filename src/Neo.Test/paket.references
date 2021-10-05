@@ -1,0 +1,14 @@
+group Neo
+    Ply
+    Serilog
+    Neo4j.Driver
+    FsToolkit.ErrorHandling
+    FsToolkit.ErrorHandling.TaskResult
+
+group Test
+    Bogus
+    Expecto
+    Expecto.FsCheck
+    Expecto.Diff
+    Expecto.BenchmarkDotnet
+    WaffleGenerator.Bogus

@@ -9,8 +9,6 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Neo.Test", "src\Neo.Test\Ne
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Neo.ThrowawayGraph", "src\Neo.ThrowawayGraph\Neo.ThrowawayGraph.fsproj", "{36808291-2F74-447C-AB07-D512915A2DF1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Neo.QueryBuilder", "src\Neo.QueryBuilder\Neo.QueryBuilder.fsproj", "{795807B2-41C7-43AB-BCAD-5D05FF0A685B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{364E1E06-64FA-4B66-87EF-DADD2ECFF773}"
 ProjectSection(SolutionItems) = preProject
 	README.md = README.md
@@ -65,17 +63,5 @@ Global
 		{36808291-2F74-447C-AB07-D512915A2DF1}.Release|x64.Build.0 = Release|Any CPU
 		{36808291-2F74-447C-AB07-D512915A2DF1}.Release|x86.ActiveCfg = Release|Any CPU
 		{36808291-2F74-447C-AB07-D512915A2DF1}.Release|x86.Build.0 = Release|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Debug|x64.Build.0 = Debug|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Debug|x86.Build.0 = Debug|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Release|x64.ActiveCfg = Release|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Release|x64.Build.0 = Release|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Release|x86.ActiveCfg = Release|Any CPU
-		{795807B2-41C7-43AB-BCAD-5D05FF0A685B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

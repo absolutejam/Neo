@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Neo\Neo.fsproj" />
-    <ProjectReference Include="..\Neo.ThrowawayGraph\Neo.ThrowawayGraph.fsproj" />
   </ItemGroup>
 
   <ItemGroup>

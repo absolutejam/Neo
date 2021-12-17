@@ -84,7 +84,7 @@ module Neo =
         Returners
     *)
 
-    /// Returns a single result
+    /// Returns a single value
     let returnSingle (transformer: QueryReturns -> 't) (cursor: IResultCursor) = task {
         let! result = Task.catch (cursor.SingleAsync (Func<_, _>(QueryReturns.ofRecord >> transformer)))
         match result with
@@ -94,13 +94,38 @@ module Neo =
             return Error err
     }
 
-    /// Returns a single result and the summary
+    /// Returns a single value and the summary
     let returnSingleWithSummary (transformer: QueryReturns -> 't) (cursor: IResultCursor) = task {
         let! result = Task.catch (cursor.SingleAsync (Func<_, _>(QueryReturns.ofRecord >> transformer)))
         match result with
         | Choice1Of2 result ->
             let! summary = cursor.ConsumeAsync ()
             return Ok (result, summary)
+        | Choice2Of2 err ->
+            return Error err
+    }
+
+    /// Returns a single value from a transformer that returns a Result<'t,exn>
+    let returnSingleResult (transformer: QueryReturns -> Result<'t, exn>) (cursor: IResultCursor) = task {
+        let! result = Task.catch (cursor.SingleAsync (Func<_, _>(QueryReturns.ofRecord >> transformer)))
+        match result with
+        | Choice1Of2 (Ok result) ->
+            return Ok result
+        | Choice1Of2 (Error err) ->
+            return Error err
+        | Choice2Of2 err ->
+            return Error err
+    }
+
+    /// Returns a single value, and the summary, from a transformer that returns a Result<'t,exn>
+    let returnSingleResultWithSummary (transformer: QueryReturns -> Result<'t, exn>) (cursor: IResultCursor) = task {
+        let! result = Task.catch (cursor.SingleAsync (Func<_, _>(QueryReturns.ofRecord >> transformer)))
+        match result with
+        | Choice1Of2 (Ok result) ->
+            let! summary = cursor.ConsumeAsync ()
+            return Ok (result, summary)
+        | Choice1Of2 (Error err) ->
+            return Error err
         | Choice2Of2 err ->
             return Error err
     }

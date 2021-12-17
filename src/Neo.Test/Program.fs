@@ -1,4 +1,4 @@
-module RealmWeaver.Server.Test.Program
+module Neo.Test.Program
 
 open Expecto
 
